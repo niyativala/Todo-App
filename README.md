@@ -62,7 +62,6 @@ This project helps users manage daily tasks by adding, viewing, and deleting tod
 ## 🙋‍♀️ Author
 
 **Niyati Vala**
-MERN Stack Developer (Fresher)
 
 ---
 
