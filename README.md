@@ -9,9 +9,9 @@ This project helps users manage daily tasks by adding, viewing, and deleting tod
 ## 🚀 Features
 
 * ➕ Add new tasks
-* 📅 Select due date
 * ❌ Delete tasks
-* 📱 Simple and clean UI
+* 📱 Responsive and clean UI
+* ⚡ Beginner-friendly project
 
 ---
 
@@ -27,7 +27,7 @@ This project helps users manage daily tasks by adding, viewing, and deleting tod
 
 * `index.html` → Main structure of app 
 * `style.css` → Styling of UI 
-* `script.js` → Functionality (Add/Delete tasks) 
+* `app.js` → Functionality (Add/Delete tasks) 
 
 ---
 
@@ -51,8 +51,10 @@ This project helps users manage daily tasks by adding, viewing, and deleting tod
 ## 📌 Future Improvements
 
 * Save tasks in Local Storage
-* Edit task feature
+* Edit tasks feature
 * Mark task as completed
+* Due dates & reminders
+* Dark mode
 * Add backend (MERN Stack)
 
 ---
