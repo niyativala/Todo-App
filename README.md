@@ -23,45 +23,60 @@ This project helps users manage daily tasks by adding, viewing, and deleting tod
 
 ---
 
-## 📂 Project Files
+## 📂 Project Structure
 
-* `index.html` → Main structure of app 
-* `style.css` → Styling of UI 
-* `app.js` → Functionality (Add/Delete tasks) 
+index.html → App structure and UI  
+style.css → Styling and layout  
+script.js → Task management logic  
 
 ---
 
-## 💻 How It Works
+## ⚙️ How It Works
 
-1. User enters task in input field
-2. Selects date
-3. Clicks **Add** button
-4. Task gets displayed in list
-5. Click **Delete** to remove task
+1. Enter a task in the input field  
+2. Click the **Add** button  
+3. Task appears in the task list  
+4. Delete tasks when completed  
+5. List updates dynamically using JavaScript  
 
 ---
 
 ## ▶️ How to Run Project
 
-1. Download or clone repository
-2. Open `index.html` in browser
+1. Download or clone this repository
+2. Open `index.html` in your browser
+3. Start managing your tasks 📝
+
+---
+
+### 📊 Project Logic (Simple)
+
+* User enters a task  
+* JavaScript creates a new task item dynamically  
+* Tasks can be removed using delete functionality  
+* DOM updates instantly without page reload  
 
 ---
 
 ## 📌 Future Improvements
 
-* Save tasks in Local Storage
-* Edit tasks feature
-* Mark task as completed
-* Due dates & reminders
-* Dark mode
-* Add backend (MERN Stack)
+- ✅ Mark tasks as completed  
+- 💾 Save tasks using Local Storage  
+- 🌙 Add dark mode  
+- 🔍 Add task search feature  
+- 📱 Improve mobile responsiveness  
 
 ---
 
 ## 🙋‍♀️ Author
 
 **Niyati Vala**
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
 
 ---
 
