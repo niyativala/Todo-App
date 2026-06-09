@@ -6,85 +6,106 @@
 }
 
 body {
-  height: 100vh;
+  background: #f4f4f4;
+  color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding-top: 50px;
+  transition: 0.3s;
 }
 
 .container {
-  width: 1000px;
+  width: 500px;
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-.input-box {
-  display: flex;
-  gap: 10px;
   margin-bottom: 20px;
 }
 
 input {
-  flex: 1;
+  width: 100%;
   padding: 12px;
   border: 2px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
   font-size: 16px;
-  outline: none;
 }
 
-input:focus {
-  border-color: #667eea;
-}
-
-.add-btn {
-  padding: 12px 18px;
+button {
+  padding: 10px 15px;
+  margin: 5px;
   border: none;
-  background: #667eea;
-  color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 15px;
   transition: 0.3s;
 }
 
-.add-btn:hover {
-  background: #5a67d8;
+#addBtn {
+  background: #28a745;
+  color: white;
+}
+
+#listBtn {
+  background: #007bff;
+  color: white;
+}
+
+#updateBtn {
+  background: #ffc107;
+  color: black;
+}
+
+#deleteBtn {
+  background: #dc3545;
+  color: white;
+}
+
+#themeBtn {
+  background: #6c757d;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 ul {
+  margin-top: 20px;
   list-style: none;
 }
 
 li {
-  background: #f4f4f4;
-  padding: 14px;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: #f8f9fa;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 5px solid #007bff;
+  border-radius: 6px;
 }
 
-.delete {
-  border: none;
-  background: crimson;
+/* Dark Theme */
+.dark {
+  background: #121212;
   color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.delete:hover {
-  background: darkred;
+.dark .container {
+  background: #1e1e1e;
+}
+
+.dark input {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+.dark li {
+  background: #2a2a2a;
+  color: white;
 }

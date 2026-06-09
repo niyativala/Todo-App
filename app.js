@@ -1,36 +1,54 @@
-let btn = document.querySelector("button");
-let ul = document.querySelector("ul");
-let inp = document.querySelector("input");
+let taskInput = document.getElementById("taskInput");
+let addBtn = document.getElementById("addBtn");
+let listBtn = document.getElementById("listBtn");
+let updateBtn = document.getElementById("updateBtn");
+let deleteBtn = document.getElementById("deleteBtn");
 
-btn.addEventListener("click", () => {
+let todo = [];
 
-    if (inp.value.trim() === "") {
+//add task
+addBtn.addEventListener("click", () => {
+    let task = taskInput.value;
+
+    if (task.trim() === "") {
+        alert("Please Enter a Task");
         return;
     }
 
-    let item = document.createElement("li");
-    item.innerText = inp.value;
-
-    let delBtn = document.createElement("button");
-    delBtn.innerText = "Delete";
-    delBtn.classList.add("delete");
-
-    item.appendChild(delBtn);
-    ul.appendChild(item);
-
-    inp.value = "";
+    todo.push(task);
+    taskInput.value = "";
 });
 
+//list task
+listBtn.addEventListener("click", () => {
+    taskList.innerHTML = "";
 
-// Event Delegation for Delete Button
-ul.addEventListener("click", (event) => {
-
-    // Check if clicked element is delete button
-    if (event.target.classList.contains("delete")) {
-
-        let listItem = event.target.parentElement;
-        listItem.remove();
-
-        console.log("Task Deleted");
+    for (let task of todo) {
+        let li = document.createElement("li");
+        li.innerText = task;
+        taskList.appendChild(li);
     }
+
+});
+
+//update task
+updateBtn.addEventListener("click", () => {
+    let index = prompt("Enter Task Index : ");
+    let newTask = prompt("Enter New Task : ");
+
+    if (index >= 0 && index < todo.length) {
+        todo[index] = newTask;
+        alert("Task Updated");
+    }
+});
+
+//delete task
+deleteBtn.addEventListener("click", () => {
+    todo.pop();
+    alert("Task Deleted");
+});
+
+// classList.toggle()
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 });
