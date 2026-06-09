@@ -28,9 +28,9 @@ This project helps users manage daily tasks efficiently with features like addin
 
 ## 📂 Project Structure
 
-index.html → App structure and UI  
-style.css → Styling and layout  
-script.js → Task management logic  
+* index.html → App structure and UI
+* style.css → Styling and layout
+* script.js → Task management logic  
 
 ---
 
