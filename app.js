@@ -44,8 +44,15 @@ updateBtn.addEventListener("click", () => {
 
 //delete task
 deleteBtn.addEventListener("click", () => {
-    todo.pop();
-    alert("Task Deleted");
+    let index = prompt("Enter Task Index :");
+
+    if (index >= 0 && index < todo.length) {
+        todo.splice(index, 1);
+        showTasks();
+        alert("Task Deleted");
+    } else {
+        alert("Invalid Index");
+    }
 });
 
 // classList.toggle()
