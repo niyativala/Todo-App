@@ -3,10 +3,23 @@ let addBtn = document.getElementById("addBtn");
 let listBtn = document.getElementById("listBtn");
 let updateBtn = document.getElementById("updateBtn");
 let deleteBtn = document.getElementById("deleteBtn");
+let taskList = document.getElementById("taskList");
+let themeBtn = document.getElementById("themeBtn");
 
 let todo = [];
 
-//add task
+// Function to display tasks
+function showTasks() {
+    taskList.innerHTML = "";
+
+    for (let i = 0; i < todo.length; i++) {
+        let li = document.createElement("li");
+        li.innerText = `${i}: ${todo[i]}`;
+        taskList.appendChild(li);
+    }
+}
+
+// Add Task
 addBtn.addEventListener("click", () => {
     let task = taskInput.value;
 
@@ -17,34 +30,31 @@ addBtn.addEventListener("click", () => {
 
     todo.push(task);
     taskInput.value = "";
+    showTasks();
 });
 
-//list task
+// List Tasks
 listBtn.addEventListener("click", () => {
-    taskList.innerHTML = "";
-
-    for (let task of todo) {
-        let li = document.createElement("li");
-        li.innerText = task;
-        taskList.appendChild(li);
-    }
-
+    showTasks();
 });
 
-//update task
+// Update Task
 updateBtn.addEventListener("click", () => {
-    let index = prompt("Enter Task Index : ");
-    let newTask = prompt("Enter New Task : ");
+    let index = prompt("Enter Task Index:");
+    let newTask = prompt("Enter New Task:");
 
-    if (index >= 0 && index < todo.length) {
+    if (index >= 0 && index < todo.length && newTask !== null) {
         todo[index] = newTask;
+        showTasks();
         alert("Task Updated");
+    } else {
+        alert("Invalid Index");
     }
 });
 
-//delete task
+// Delete Task
 deleteBtn.addEventListener("click", () => {
-    let index = prompt("Enter Task Index :");
+    let index = prompt("Enter Task Index to Delete:");
 
     if (index >= 0 && index < todo.length) {
         todo.splice(index, 1);
@@ -55,7 +65,7 @@ deleteBtn.addEventListener("click", () => {
     }
 });
 
-// classList.toggle()
+// Dark Mode Toggle
 themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 });
